@@ -12,6 +12,7 @@ A convenient way for determining dates for month-end business tasks.
 Useful links:
 \itemize{
   \item \url{https://github.com/Auckland-Council-CC-Insights-Team/mendr}
+  \item \url{https://auckland-council-cc-insights-team.github.io/mendr/}
   \item Report bugs at \url{https://github.com/Auckland-Council-CC-Insights-Team/mendr/issues}
 }
 
