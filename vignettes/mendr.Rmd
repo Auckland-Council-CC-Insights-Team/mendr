@@ -1,0 +1,63 @@
+---
+title: "mendr"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mendr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mendr)
+```
+
+The goal of mendr is to simplify the task of creating a calendar of dates for a
+recurring process.
+
+A typical use case for this is to import the data produced by `mendr` into Microsoft
+Planner via a Power Automate Flow. We describe this process below.
+
+First, let's create a dataset. Here we need a list of tasks, and for each task an
+offset relative to the first working day of the month. We count using index zero,
+so the first working day of the month is 0, the second working day of the month is 
+1 and so on. We can also work backwards: -1 is the first working day prior to the first
+working day of the month.
+
+After creating the dataset, we call `create_calendar()` in order to store a calendar
+of non-working days that will be used to calculate the appropriate dates for our
+schedule. By default, this stores known non-working days for Auckland Council
+staff from Labour Day 2022 to Matariki 2024.
+
+```{r}
+ tasks <- data.frame(
+   tasks = c("Send email reminder", "Extract data", "Run report"),
+   offsets = c(-2, 0, 1)
+   )
+
+create_calendar()
+```
+
+Although we manually created the data here, we would typically store this in an 
+Excel spreadsheet and read it using the [readr](https://readr.tidyverse.org/)
+package.
+
+Next, let's convert our offsets into actual dates for the first three months of
+2023.
+
+```{r}
+schedule <- create_schedule(
+  schedule_data = tasks,
+  starting_month = "2023-01",
+  iterations = 3
+  )
+
+schedule
+```
+
