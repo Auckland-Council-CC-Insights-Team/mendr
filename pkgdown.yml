@@ -1,0 +1,10 @@
+pandoc: 2.19.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  mendr: mendr.html
+last_built: 2022-10-29T07:16Z
+urls:
+  reference: https://auckland-council-cc-insights-team.github.io/mendr/reference
+  article: https://auckland-council-cc-insights-team.github.io/mendr/articles
+
