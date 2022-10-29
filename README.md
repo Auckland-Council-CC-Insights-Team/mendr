@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of mendr is to simplify the task of creating a calendar of
@@ -45,14 +46,14 @@ create_schedule(
   starting_month = "2023-01",
   iterations = 3
   )
-#>                 tasks       date
-#> 1 Send email reminder 2022-12-22
-#> 2        Extract data 2023-01-09
-#> 3          Run report 2023-01-10
-#> 4 Send email reminder 2023-01-27
-#> 5        Extract data 2023-02-01
-#> 6          Run report 2023-02-02
-#> 7 Send email reminder 2023-02-27
-#> 8        Extract data 2023-03-01
-#> 9          Run report 2023-03-02
+#>         date
+#> 1 2022-12-22
+#> 2 2023-01-09
+#> 3 2023-01-10
+#> 4 2023-01-27
+#> 5 2023-02-01
+#> 6 2023-02-02
+#> 7 2023-02-27
+#> 8 2023-03-01
+#> 9 2023-03-02
 ```

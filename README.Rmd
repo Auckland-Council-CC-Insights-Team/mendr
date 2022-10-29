@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/R-CMD-check.yaml)
+[![test-coverage](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/Auckland-Council-CC-Insights-Team/mendr/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 The goal of mendr is to simplify the task of creating a calendar of dates for a
