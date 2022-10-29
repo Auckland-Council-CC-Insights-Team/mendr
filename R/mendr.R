@@ -163,9 +163,9 @@ schedule_month <- function(schedule_data, anchor_month) {
 
   processed_schedule <- schedule_data |>
     mutate(
-      date =  bizdays::add.bizdays(anchor_date, dplyr::cur_data()[[2]], "NonWorkingDays")
-    ) |>
-    select(1, date, 3)
+      date =  bizdays::add.bizdays(anchor_date, dplyr::cur_data()[[2]], "NonWorkingDays"),
+      .keep = "unused"
+    )
 
   return(processed_schedule)
 }

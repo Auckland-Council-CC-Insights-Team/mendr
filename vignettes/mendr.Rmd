@@ -33,7 +33,7 @@ working day of the month.
 After creating the dataset, we call `create_calendar()` in order to store a calendar
 of non-working days that will be used to calculate the appropriate dates for our
 schedule. By default, this stores known non-working days for Auckland Council
-staff from Labour Day 2022 to Matariki 2024.
+staff from Labour Day 2022 to Labour Day 2024.
 
 ```{r}
  tasks <- data.frame(
