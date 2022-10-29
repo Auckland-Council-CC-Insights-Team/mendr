@@ -42,8 +42,7 @@ library(mendr)
 create_calendar()
 
 # Create a data frame of tasks and offsets. Alternatively, you could
-# read in an Excel file here using the [readr](https://readr.tidyverse.org/)
-# package.
+# read in an Excel file here.
  tasks <- data.frame(
    tasks = c("Send email reminder", "Extract data", "Run report"),
    offsets = c(-2, 0, 1)
