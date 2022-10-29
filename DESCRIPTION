@@ -20,8 +20,8 @@ Config/testthat/edition: 3
 Imports: 
     bizdays (>= 1.0.12),
     dplyr (>= 1.0.9),
-    here,
+    here (>= 1.0.1),
     lubridate (>= 1.7.10),
-    purrr,
-    writexl
+    purrr (>= 0.3.4),
+    writexl (>= 1.4.0)
 VignetteBuilder: knitr
