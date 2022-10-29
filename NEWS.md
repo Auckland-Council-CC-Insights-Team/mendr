@@ -1,3 +1,5 @@
+# mendr 0.1.0
+
 # mendr 0.0.0.9000
 
 * Created a basic functioning package for initial user testing
