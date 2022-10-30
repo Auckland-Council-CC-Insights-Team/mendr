@@ -2,7 +2,8 @@
 #'
 #' @description `auckland_council_holidays()` is an internal function that lists
 #' the dates when kaimahi at Auckland Council are not expected to work, either
-#' because of public holidays or because of an organisation-wide shutdown.
+#' because of public holidays or because of an organisation-wide shutdown. These
+#' dates were taken from https://www.employment.govt.nz/leave-and-holidays/public-holidays/public-holidays-and-anniversary-dates/
 #'
 #' @return A numeric vector containing dates, beginning on 24 October 2022.
 #'

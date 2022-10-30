@@ -58,13 +58,13 @@ create_calendar()
 tasks <- data.frame(
   tasks = c("Send email reminder", "Extract data", "Run report"),
   offsets = c(-2, 0, 1)
-  )
+)
 
 # Pass the data frame to `create_schedule` to create a schedule for the first
 # three months of 2023
 create_schedule(
-schedule_data = tasks,
-starting_month = "2023-01",
-iterations = 3
+  schedule_data = tasks,
+  starting_month = "2023-01",
+  iterations = 3
 )
 }
