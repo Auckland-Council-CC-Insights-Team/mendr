@@ -117,26 +117,26 @@ create_calendar <- function(holidays = auckland_council_holidays(), weekend = c(
 #' tasks <- data.frame(
 #'   tasks = c("Send email reminder", "Extract data", "Run report"),
 #'   offsets = c(-2, 0, 1)
-#'   )
+#' )
 #'
 #' # Pass the data frame to `create_schedule` to create a schedule for the first
 #' # three months of 2023
 #' create_schedule(
-#' schedule_data = tasks,
-#' starting_month = "2023-01",
-#' iterations = 3
+#'   schedule_data = tasks,
+#'   starting_month = "2023-01",
+#'   iterations = 3
 #' )
 create_schedule <- function(schedule_data, starting_month, iterations = 1, filepath = NULL) {
   first_month <- ymd(paste0(starting_month, "-01"))
-  final_month <- first_month |> lubridate::add_with_rollback(months(iterations-1))
+  final_month <- first_month |> lubridate::add_with_rollback(months(iterations - 1))
   starting_months <- seq(first_month, final_month, by = "months")
 
   schedule <- purrr::map_dfr(
     .x = starting_months,
-    .f = ~schedule_month(schedule_data, anchor_month = .x)
+    .f = ~ schedule_month(schedule_data, anchor_month = .x)
   )
 
-  if(!is.null(filepath)) {
+  if (!is.null(filepath)) {
     write_xlsx(schedule, path = paste(filepath, ".xlsx"))
   }
 
@@ -163,7 +163,7 @@ schedule_month <- function(schedule_data, anchor_month) {
 
   processed_schedule <- schedule_data |>
     mutate(
-      date =  bizdays::add.bizdays(anchor_date, dplyr::cur_data()[[2]], "NonWorkingDays"),
+      date = bizdays::add.bizdays(anchor_date, dplyr::cur_data()[[2]], "NonWorkingDays"),
       .keep = "unused"
     )
 

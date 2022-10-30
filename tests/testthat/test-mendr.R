@@ -24,7 +24,7 @@ test_that("we can create a schedule of tasks for several months", {
   tasks <- data.frame(
     tasks = c("Send email reminder", "Extract data", "Run report"),
     offsets = c(-2, 0, 1)
-    )
+  )
 
   iterations <- 3
 
@@ -32,11 +32,11 @@ test_that("we can create a schedule of tasks for several months", {
     schedule_data = tasks,
     starting_month = "2023-01",
     iterations = iterations
-    )
+  )
 
   # the number of rows in the schedule should equal the number of rows in our
   # dataset, multiplied by the number of iterations
-  expect_equal(nrow(schedule), nrow(tasks)*iterations)
+  expect_equal(nrow(schedule), nrow(tasks) * iterations)
   expect_equal(max(schedule$date), as.Date("2023-03-02"))
 })
 
@@ -59,7 +59,7 @@ test_that("we can create a schedule of tasks for one month", {
   expect_equal(
     schedule_month(unassigned_tasks, anchor_month) |> dplyr::pull(date) |> max(),
     as.Date("2023-01-10")
-    )
+  )
 
   expect_equal(
     schedule_month(assigned_tasks, anchor_month) |> dplyr::pull(date) |> max(),
