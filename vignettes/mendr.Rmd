@@ -45,7 +45,7 @@ create_calendar()
 ```
 
 Although we manually created the data here, we would typically store this in an 
-Excel spreadsheet and read it using the [readr](https://readr.tidyverse.org/)
+Excel spreadsheet and read it using the [readxl](https://readxl.tidyverse.org/)
 package.
 
 Next, let's convert our offsets into actual dates for the first three months of
@@ -61,3 +61,8 @@ schedule <- create_schedule(
 schedule
 ```
 
+We can pass the optional `filepath` argument to `create_schedule` too, and this
+saves the output to an Excel file. Assuming we've done so, we can now reference
+that file in our Power Automate flow.
+
+To progress, we first create a new Plan in Microsoft Planner. 
