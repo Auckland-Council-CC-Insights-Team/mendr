@@ -9,18 +9,52 @@
 #'
 #' @noRd
 auckland_council_holidays <- function() {
-  labour_day <- c(ymd("2022-10-24"), ymd("2023-10-23"), ymd("2024-10-28"))
-  christmas_shutdown <- c(
-    seq(ymd("2022-12-26"), ymd("2023-01-06"), by = "days"),
-    seq(ymd("2023-12-25"), ymd("2024-01-05"), by = "days")
+  labour_day <- c(
+    ymd("2022-10-24")
+    , ymd("2023-10-23")
+    , ymd("2024-10-28")
+    , ymd("2025-10-27")
   )
-  auckland_anniversary <- c(ymd("2023-01-30"), ymd("2024-01-29"))
-  waitangi_day <- c(ymd("2023-02-06"), ymd("2024-02-06"))
-  good_friday <- c(ymd("2023-04-07"), ymd("2024-03-29"))
-  easter_monday <- c(ymd("2023-04-10"), ymd("2024-04-01"))
-  anzac_day <- c(ymd("2023-04-25"), ymd("2024-04-25"))
-  kings_birthday <- c(ymd("2023-06-05"), ymd("2024-06-03"))
-  matariki <- c(ymd("2023-07-14"), ymd("2024-06-28"))
+  christmas_shutdown <- c(
+    seq(ymd("2022-12-26"), ymd("2023-01-06"), by = "days")
+    , seq(ymd("2023-12-25"), ymd("2024-01-05"), by = "days")
+    , seq(ymd("2024-12-23"), ymd("2025-01-03"), by = "days")
+  )
+  auckland_anniversary <- c(
+    ymd("2023-01-30")
+    , ymd("2024-01-29")
+    , ymd("2025-01-27")
+  )
+  waitangi_day <- c(
+    ymd("2023-02-06")
+    , ymd("2024-02-06")
+    , ymd("2025-02-06")
+  )
+  good_friday <- c(
+    ymd("2023-04-07")
+    , ymd("2024-03-29")
+    , ymd("2024-04-18")
+  )
+  easter_monday <- c(
+    ymd("2023-04-10")
+    , ymd("2024-04-01")
+    , ymd("2024-04-21")
+  )
+  anzac_day <- c(
+    ymd("2023-04-25")
+    , ymd("2024-04-25")
+    , ymd("2024-04-25")
+  )
+  kings_birthday <- c(
+    ymd("2023-06-05")
+    , ymd("2024-06-03")
+    , ymd("2024-06-02")
+  )
+  matariki <- c(
+    ymd("2023-07-14")
+    , ymd("2024-06-28")
+    , ymd("2024-06-20")
+  )
 
   non_working_days <- c(
     labour_day,
